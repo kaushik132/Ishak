@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1140px !important;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* ------------- hero-section -------------- */
+
+.hero-section {
+  background-image: url("../images/trip-1.jpg");
+  padding: 170px 0 30px;
+  background-size: cover;
+}
+
+.heading {
+  line-height: 80px;
+}
+
+.media {
+  background: rgba(196, 105, 58, 0.7);
+}
+
+/* jaipurHeritageSection */
+
+.jaipurHeritageSection {
+  padding: 100px 0;
+}
+
+.jaipurHeritageSection .albert-hall-bg,
+.jaipurHeritageSection .hawa-mahal-bg,
+.jaipurHeritageSection .patrika-gate-bg {
+  background-image: url("../images/albert-hall.jpg");
+  height: 550px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.jaipurHeritageSection .hawa-mahal-bg {
+  background-image: url("../images/hawa-mahal.jpg");
+  height: 290px;
+  background-position: top;
+}
+
+.jaipurHeritageSection .patrika-gate-bg {
+  background-image: url("../images/patrika-gate.jpg");
+  height: 240px;
+  margin-top: 20px;
+}
+
+/* contact page */
+
+.contact-heding {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.contact-heding h1 {
+  font-size: 50px;
+}
+
+.contact-baner {
+  position: relative;
+  top: 0px;
+  z-index: -1;
+  width: 100%;
+  height: 500px;
+  color: white;
+}
+
+.sub-heding {
+  padding: 40px;
+}
+.sub-heding h2 {
+  font-size: 54px;
+}
+.sub-heding p {
+  font-size: 22px;
+}
+
+.contact-detailes {
+  padding-bottom: 50px;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: flex-start;
+}
+
+.left-section {
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.left-section img {
+  height: 550px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  border-radius: 16px;
+}
+
+.form-section {
+  padding: 30px 30px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-card {
+  background: #fff;
+  padding: 28px 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+
+  width: 100%;
+}
+
+.info-card i {
+  font-size: 20px;
+  border: none;
+  padding: 10px;
+}
+
+.info-text p {
+  font-size: 18px;
+  color: #00000066;
+}
+
+.info-text strong {
+  display: block;
+  font-weight: 600;
+}
+
+iframe {
+  height: 500px;
+}
+
+/* gallery  */
+
+.gallery-hero-section {
+  background-image: url("../images/architecturel-city-palace.jpg");
+  padding: 170px 0;
+  background-size: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 10px !important;
+  height: 10px !important;
+  font-size: 10px !important;
+}
+
+.tour-trip-col {
+  background-image: url("../images/albert-hall.jpg");
+  height: 360px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 12px;
+  position: relative;
+}
+
+/* contact-hero-section */
+
+.contact-hero-section,
+.tour-details-hero-section {
+  background-image: url("../images/hawa-mahal.jpg");
+  padding: 170px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.tour-details-hero-section {
+  padding: 200px 0;
+}
+
+@media only screen and (max-width: 992px) {
+  .heading {
+    line-height: 38px;
+  }
+  .left-section img {
+    height: 400px;
+  }
+
+  .form-section {
+    padding: 30px 20px;
+  }
+
+  .form-section input::placeholder,
+  .form-section textarea::placeholder {
+    font-size: 14px;
+  }
+
+  .form-section button {
+    font-size: 14px;
+  }
+
+  .jaipurHeritageSection .albert-hall-bg,
+  .jaipurHeritageSection .hawa-mahal-bg,
+  .jaipurHeritageSection .patrika-gate-bg {
+    height: 290px !important;
+  }
+
+  .gallery-hero-section,
+  .contact-hero-section {
+    padding: 100px 0;
+  }
+
+  /* Force custom size */
+  .custom-arrow {
+    display: none !important;
+  }
+
+  iframe {
+    height: 200px;
+  }
+
+  .tour-details-hero-section {
+    padding: 170px 0;
+  }
+}
+
+/* Remove default Swiper arrows */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
+
+/* Force custom size */
+.custom-arrow {
+  display: flex;
+  width: 50px !important;
+  height: 50px !important;
+  background-color: #a95c32; /* optional */
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 9999px !important;
+  z-index: 10 !important;
+  padding: 10px !important;
+}
+
+/* Arrow container positioning */
+.swiper-button-prev,
+.swiper-button-next {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+.swiper-slide .sliderImage {
+  width: 90% !important;
+  margin: 0 auto;
+}
+
+.contact-baner {
+  position: relative;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 500px;
+  color: white;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.heding {
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.slide {
+  border: 1px solid #cac9c9;
+  padding: 8px;
+}
+
+.object-cover {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.book-btn {
+  border: 1px solid #a95c32;
+  border-radius: 23px;
+  color: #a95c32;
+}
+
+.money {
+  font-size: 24px;
+}
