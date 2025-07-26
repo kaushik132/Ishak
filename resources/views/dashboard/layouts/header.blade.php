@@ -62,7 +62,7 @@
                 <li>
                   <a
                     style="color: black !important"
-                    href="./first-tour.html"
+                    href="{{url('tour')}}"
                     class="block px-4 py-2 hover:bg-gray-100 rounded-tl-md rounded-tr-md text-sm"
                     >First Day Tour</a
                   >
@@ -70,7 +70,7 @@
                 <li>
                   <a
                     style="color: black !important"
-                    href="./second-tour.html"
+                    href="{{url('tour')}}"
                     class="block px-4 py-2 hover:bg-gray-100 rounded-bl-md rounded-br-md text-sm"
                     >Second Day Tour</a
                   >
@@ -79,12 +79,12 @@
             </li>
 
             <li>
-              <a href="./gallery.html" class="text-white text-sm md:text-base"
+              <a href="{{url('gallery')}}" class="text-white text-sm md:text-base"
                 >Gallery</a
               >
             </li>
             <li>
-              <a href="./contact.html" class="text-white text-sm md:text-base"
+              <a href="{{url('contact-us')}}" class="text-white text-sm md:text-base"
                 >Contact Us</a
               >
             </li>
@@ -145,16 +145,16 @@
             </button>
             <ul id="mobileDropdown" class="pl-4 mt-2 space-y-2 hidden">
               <li>
-                <a href="./first-tour.html" class="block">First Day Tour</a>
+                <a href="{{url('tour')}}" class="block">First Day Tour</a>
               </li>
               <li>
-                <a href="./second-tour.html" class="block">Second Day Tour</a>
+                <a href="{{url('tour')}}" class="block">Second Day Tour</a>
               </li>
             </ul>
           </li>
 
-          <li><a href="./gallery.html">Gallery</a></li>
-          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="{{url('gallery')}}">Gallery</a></li>
+          <li><a href="{{url('contact-us')}}">Contact Us</a></li>
           <li class="flex gap-4">
             <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="#"

@@ -4,7 +4,7 @@
         class="grid grid-cols-1 lg:grid-cols-4 justify-between flex border-b-[1px] pb-6"
       >
         <div class="col-span-1 text-center lg:text-left">
-          <img class="w-40 mx-auto lg:mx-0" src="./images/logo.png" alt="" />
+          <img class="w-40 mx-auto lg:mx-0" src="{{url('images/logo.png')}}" alt="" />
 
           <p class="font-semibold text-[14px] mt-3 lg:mt-8 lg:w-[65%]">
             UI Wiki simplifies design with intuitive tools and templates,
@@ -52,10 +52,10 @@
           </h2>
 
           <ul class="mt-5 text-[14px] font-semibold text-center lg:text-left">
-            <li class="mb-3"><a href="./index.html">Home Page</a></li>
-            <li class="mb-3"><a href="./gallery.html">Gallery</a></li>
+            <li class="mb-3"><a href="{{url('/')}}">Home Page</a></li>
+            <li class="mb-3"><a href="{{url('gallery')}}">Gallery</a></li>
             <li class="mb-3">
-              <a href="./first-tour.html">Tour & Packages</a>
+              <a href="{{url('tour')}}">Tour & Packages</a>
             </li>
             <li><a href="#">Privacy & Policy</a></li>
           </ul>
@@ -67,7 +67,7 @@
           </h2>
 
           <ul class="mt-5 text-[14px] font-semibold text-center lg:text-left">
-            <li class="mb-3"><a href="./contact.html">Contact Us</a></li>
+            <li class="mb-3"><a href="{{url('contact')}}">Contact Us</a></li>
             <li class="mb-3"><a href="#">FAQ</a></li>
             <li class="mb-3"><a href="#">Help & Support</a></li>
           </ul>
