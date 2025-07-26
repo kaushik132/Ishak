@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.main')
 @section('main.section')
-   <!-- hero section  -->
+<!-- hero section  -->
     <section id="hero-section" class="tour-details-hero-section px-7 lg:px-14">
       <h1
         class="text-white heading font-semibold lg:text-[62px] text-[28px] text-center lg:w-[60%] mx-auto"
@@ -27,13 +27,13 @@
           across the land of kings.
         </p>
       </div>
-      <div class="swiper mySwiper" id="tourSwiper">
+      <div class="swiper" id="tourSwiper">
         <div class="swiper-wrapper">
           <!-- Slide Start -->
           <div class="swiper-slide">
             <div class="bg-white rounded-[12px] overflow-hidden slide">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -66,7 +66,7 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -98,40 +98,7 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -164,7 +131,7 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -197,7 +164,40 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
+                alt="Amber Fort"
+                class="w-full h-[300px] object-cover"
+              />
+
+              <div class="p-2 space-y-3">
+                <h2 class="text-xl font-semibold text-gray-800">
+                  Amber Fort & City Palace
+                </h2>
+                <p class="text-gray-600 text-sm">
+                  A glimpse into the breathtaking places and unforgettable
+                  memories we create.
+                </p>
+
+                <div class="flex justify-between items-center pt-2">
+                  <h3
+                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
+                  >
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <span class="money leading-none">11,000</span>
+                  </h3>
+
+                  <a href="./tour-details.html" class="book-btn px-3 py-1">
+                    Book Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="bg-white slide rounded-[12px] overflow-hidden">
+              <img
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -244,12 +244,12 @@
         </p>
       </div>
 
-      <div id="videoSlider" class="swiper  mySwiperVideoSection mx-auto rounded-[16px]">
+      <div id="videoSlider" class="swiper mx-auto rounded-[16px]">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide">
             <img
-              src="{{url('assets/images/hawa-mahal.jpg')}}"
+              src="./images/hawa-mahal.jpg"
               class="h-[400px] gallery-img lg:h-[600px] sliderImage w-full object-cover rounded-[16px]"
               data-index="0"
               alt=""
@@ -285,7 +285,7 @@
           <!-- Slide 2 -->
           <div class="swiper-slide">
             <img
-              src="{{url('assets/images/patrika-gate.jpg')}}"
+              src="./images/patrika-gate.jpg"
               class="h-[400px] gallery-img lg:h-[600px] sliderImage w-full object-cover rounded-[16px]"
               alt=""
               data-index="1"
@@ -370,13 +370,13 @@
           across the land of kings.
         </p>
       </div>
-      <div class="swiper mySwiper" id="tourSwiper">
+      <div class="swiper" id="tourSwiper">
         <div class="swiper-wrapper">
           <!-- Slide Start -->
           <div class="swiper-slide">
             <div class="bg-white rounded-[12px] overflow-hidden slide">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -409,7 +409,7 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -441,40 +441,7 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -507,7 +474,7 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -540,7 +507,40 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
+                alt="Amber Fort"
+                class="w-full h-[300px] object-cover"
+              />
+
+              <div class="p-2 space-y-3">
+                <h2 class="text-xl font-semibold text-gray-800">
+                  Amber Fort & City Palace
+                </h2>
+                <p class="text-gray-600 text-sm">
+                  A glimpse into the breathtaking places and unforgettable
+                  memories we create.
+                </p>
+
+                <div class="flex justify-between items-center pt-2">
+                  <h3
+                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
+                  >
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <span class="money leading-none">11,000</span>
+                  </h3>
+
+                  <a href="./tour-details.html" class="book-btn px-3 py-1">
+                    Book Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="bg-white slide rounded-[12px] overflow-hidden">
+              <img
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -585,13 +585,13 @@
           across the land of kings.
         </p>
       </div>
-      <div class="swiper mySwiper" id="tourSwiper">
+      <div class="swiper" id="tourSwiper">
         <div class="swiper-wrapper">
           <!-- Slide Start -->
           <div class="swiper-slide">
             <div class="bg-white rounded-[12px] overflow-hidden slide">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -624,7 +624,7 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -656,72 +656,7 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -754,7 +689,72 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
+                alt="Amber Fort"
+                class="w-full h-[300px] object-cover"
+              />
+
+              <div class="p-2 space-y-3">
+                <h2 class="text-xl font-semibold text-gray-800">
+                  Amber Fort & City Palace
+                </h2>
+                <p class="text-gray-600 text-sm">
+                  A glimpse into the breathtaking places and unforgettable
+                  memories we create.
+                </p>
+
+                <div class="flex justify-between items-center pt-2">
+                  <h3
+                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
+                  >
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <span class="money leading-none">11,000</span>
+                  </h3>
+                  <a href="./tour-details.html" class="book-btn px-3 py-1">
+                    Book Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="bg-white slide rounded-[12px] overflow-hidden">
+              <img
+                src="./images/architecturel-city-palace.jpg"
+                alt="Amber Fort"
+                class="w-full h-[300px] object-cover"
+              />
+
+              <div class="p-2 space-y-3">
+                <h2 class="text-xl font-semibold text-gray-800">
+                  Amber Fort & City Palace
+                </h2>
+                <p class="text-gray-600 text-sm">
+                  A glimpse into the breathtaking places and unforgettable
+                  memories we create.
+                </p>
+
+                <div class="flex justify-between items-center pt-2">
+                  <h3
+                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
+                  >
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <span class="money leading-none">11,000</span>
+                  </h3>
+
+                  <a href="./tour-details.html" class="book-btn px-3 py-1">
+                    Book Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="bg-white slide rounded-[12px] overflow-hidden">
+              <img
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -799,13 +799,13 @@
           across the land of kings.
         </p>
       </div>
-      <div class="swiper mySwiper" id="tourSwiper">
+      <div class="swiper" id="tourSwiper">
         <div class="swiper-wrapper">
           <!-- Slide Start -->
           <div class="swiper-slide">
             <div class="bg-white rounded-[12px] overflow-hidden slide">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -838,7 +838,7 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -870,40 +870,7 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -936,7 +903,7 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -969,7 +936,40 @@
           <div class="swiper-slide">
             <div class="bg-white slide rounded-[12px] overflow-hidden">
               <img
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
+                alt="Amber Fort"
+                class="w-full h-[300px] object-cover"
+              />
+
+              <div class="p-2 space-y-3">
+                <h2 class="text-xl font-semibold text-gray-800">
+                  Amber Fort & City Palace
+                </h2>
+                <p class="text-gray-600 text-sm">
+                  A glimpse into the breathtaking places and unforgettable
+                  memories we create.
+                </p>
+
+                <div class="flex justify-between items-center pt-2">
+                  <h3
+                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
+                  >
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                    <span class="money leading-none">11,000</span>
+                  </h3>
+
+                  <a href="./tour-details.html" class="book-btn px-3 py-1">
+                    Book Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="bg-white slide rounded-[12px] overflow-hidden">
+              <img
+                src="./images/architecturel-city-palace.jpg"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
@@ -1016,7 +1016,7 @@
           us
         </p>
       </div>
-      <div class="swiper mySwiper">
+      <div class="swiper" id="reviewSwiper">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide">
@@ -1215,7 +1215,7 @@
         </div>
       </div>
 
-      <div class="swiper mt-10 mySwiper2">
+      <div class="swiper mt-10" id="reviewSwiper">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide">
@@ -1414,48 +1414,4 @@
         </div>
       </div>
     </section>
-
-
-    
-<script>
-  const swiper = new Swiper("#videoSlider", {
-    loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-</script>
-
-  
-   <script>
-      console.log("Video Slider");
-      
-      const swiper2 = new Swiper(".mySwiperVideoSection", {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        autoplay: true,
-
-        breakpoints: {
-          640: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 1,
-            loop: true,
-            autoplay: {
-              delay: 2000,
-            },
-          },
-          1024: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-          },
-        },
-      });
-    </script> 
 @endsection

@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.main')
 @section('main.section')
-   <!-- hero section  -->
+<!-- hero section  -->
     <section id="hero-section" class="hero-section px-7 lg:px-14">
       <div>
         <div>
@@ -25,22 +25,22 @@
                 >
                   <img
                     class="w-8 rounded-full h-8 object-cover"
-                    src="{{url('assets/images/user-1.png')}}"
+                    src="./images/user-1.png"
                     alt=""
                   />
                   <img
                     class="w-8 rounded-full h-8 -ml-2 object-cover"
-                    src="{{url('assets/images/user-2.png')}}"
+                    src="./images/user-2.png"
                     alt=""
                   />
                   <img
                     class="w-8 rounded-full h-8 -ml-2 object-cover"
-                    src="{{url('assets/images/user-3.png')}}"
+                    src="./images/user-3.png"
                     alt=""
                   />
                   <img
                     class="w-8 rounded-full h-8 -ml-2 object-cover"
-                    src="{{url('assets/images/user-4.png')}}"
+                    src="./images/user-4.png"
                     alt=""
                   />
 
@@ -108,7 +108,7 @@
                 <div class="swiper-slide w-[23%] group">
                   <img
                     class="h-[260px] group-[.swiper-slide-active]:h-[170px] transition-all duration-300 object-cover rounded-lg"
-                    src="{{url('assets/images/slider-item-1.jpg')}}"
+                    src="./images/slider-item-1.jpg"
                     alt=""
                   />
                   <div class="hidden group-[.swiper-slide-active]:block">
@@ -130,7 +130,7 @@
                 <div class="swiper-slide w-[23%] group">
                   <img
                     class="h-[260px] group-[.swiper-slide-active]:h-[170px] transition-all duration-300 object-cover rounded-lg"
-                    src="{{url('assets/images/slider-item-2.jpg')}}"
+                    src="./images/slider-item-2.jpg"
                     alt=""
                   />
 
@@ -153,7 +153,7 @@
                 <div class="swiper-slide w-[23%] group">
                   <img
                     class="h-[260px] group-[.swiper-slide-active]:h-[170px] transition-all duration-300 object-cover rounded-lg"
-                    src="{{url('assets/images/slider-item-3.jpg')}}"
+                    src="./images/slider-item-3.jpg"
                     alt=""
                   />
 
@@ -176,7 +176,7 @@
                 <div class="swiper-slide w-[23%] group">
                   <img
                     class="h-[260px] group-[.swiper-slide-active]:h-[170px] transition-all duration-300 object-cover rounded-lg"
-                    src="{{url('assets/images/slider-item-1.jpg')}}"
+                    src="./images/slider-item-1.jpg"
                     alt=""
                   />
                   <div class="hidden group-[.swiper-slide-active]:block">
@@ -198,7 +198,7 @@
                 <div class="swiper-slide w-[23%] group">
                   <img
                     class="h-[260px] group-[.swiper-slide-active]:h-[170px] transition-all duration-300 object-cover rounded-lg"
-                    src="{{url('assets/images/slider-item-2.jpg')}}"
+                    src="./images/slider-item-2.jpg"
                     alt=""
                   />
 
@@ -221,7 +221,7 @@
                 <div class="swiper-slide w-[23%] group">
                   <img
                     class="h-[260px] group-[.swiper-slide-active]:h-[170px] transition-all duration-300 object-cover rounded-lg"
-                    src="{{url('assets/images/slider-item-3.jpg')}}"
+                    src="./images/slider-item-3.jpg"
                     alt=""
                   />
 
@@ -290,22 +290,22 @@
                   >
                     <img
                       class="w-8 rounded-full h-8 object-cover"
-                      src="{{url('assets/images/user-1.png')}}"
+                      src="./images/user-1.png"
                       alt=""
                     />
                     <img
                       class="w-8 rounded-full h-8 -ml-2 object-cover"
-                      src="{{url('assets/images/user-2.png')}}"
+                      src="./images/user-2.png"
                       alt=""
                     />
                     <img
                       class="w-8 rounded-full h-8 -ml-2 object-cover"
-                      src="{{url('assets/images/user-3.png')}}"
+                      src="./images/user-3.png"
                       alt=""
                     />
                     <img
                       class="w-8 rounded-full h-8 -ml-2 object-cover"
-                      src="{{url('assets/images/user-4.png')}}"
+                      src="./images/user-4.png"
                       alt=""
                     />
 
@@ -354,22 +354,22 @@
                   >
                     <img
                       class="w-8 rounded-full h-8 object-cover"
-                      src="{{url('assets/images/user-1.png')}}"
+                      src="./images/user-1.png"
                       alt=""
                     />
                     <img
                       class="w-8 rounded-full h-8 -ml-2 object-cover"
-                      src="{{url('assets/images/user-2.png')}}"
+                      src="./images/user-2.png"
                       alt=""
                     />
                     <img
                       class="w-8 rounded-full h-8 -ml-2 object-cover"
-                      src="{{url('assets/images/user-3.png')}}"
+                      src="./images/user-3.png"
                       alt=""
                     />
                     <img
                       class="w-8 rounded-full h-8 -ml-2 object-cover"
-                      src="{{url('assets/images/user-4.png')}}"
+                      src="./images/user-4.png"
                       alt=""
                     />
 
@@ -417,22 +417,22 @@
                   >
                     <img
                       class="w-8 rounded-full h-8 object-cover"
-                      src="{{url('assets/images/user-1.png')}}"
+                      src="./images/user-1.png"
                       alt=""
                     />
                     <img
                       class="w-8 rounded-full h-8 -ml-2 object-cover"
-                      src="{{url('assets/images/user-2.png')}}"
+                      src="./images/user-2.png"
                       alt=""
                     />
                     <img
                       class="w-8 rounded-full h-8 -ml-2 object-cover"
-                      src="{{url('assets/images/user-3.png')}}"
+                      src="./images/user-3.png"
                       alt=""
                     />
                     <img
                       class="w-8 rounded-full h-8 -ml-2 object-cover"
-                      src="{{url('assets/images/user-4.png')}}"
+                      src="./images/user-4.png"
                       alt=""
                     />
 
@@ -494,7 +494,7 @@
             <div
               class="shadow-lg bg-[#A95C32] h-[80px] w-[80px] flex justify-center items-center rounded-full"
             >
-              <img class="w-8" src="{{url('assets/images/rupee-icon.png')}}" alt="" />
+              <img class="w-8" src="./images/rupee-icon.png" alt="" />
             </div>
 
             <div class="mt-2">
@@ -630,7 +630,7 @@
             <img
               class="rounded-[16px] gallery-img cursor-pointer lg:h-[470px] object-cover"
               data-index="0"
-              src="{{url('assets/images/royal-gaitor.jpg')}}"
+              src="./images/royal-gaitor.jpg"
               alt=""
             />
 
@@ -643,7 +643,7 @@
             <img
               class="rounded-[16px] gallery-img cursor-pointer object-cover mt-4"
               data-index="1"
-              src="{{url('assets/images/royal-gaitor.jpg')}}"
+              src="./images/royal-gaitor.jpg"
               alt=""
             />
             <span
@@ -660,7 +660,7 @@
                 <img
                   class="lg:h-[265px] h-[150px] cursor-pointer w-[190px] lg:w-[360px] object-cover rounded-[16px] gallery-img"
                   data-index="2"
-                  src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                  src="./images/architecturel-city-palace.jpg"
                   alt=""
                 />
                 <span
@@ -673,7 +673,7 @@
                 <img
                   class="lg:h-[265px] h-[150px] cursor-pointer w-[190px] lg:w-[360px] object-cover mt-4 rounded-[16px] gallery-img"
                   data-index="3"
-                  src="{{url('assets/images/hawa-mahal.jpg')}}"
+                  src="./images/hawa-mahal.jpg"
                   alt=""
                 />
                 <span
@@ -687,7 +687,7 @@
               <div class="relative">
                 <img
                   class="lg:h-[545px] gallery-img cursor-pointer lg:w-[320px] w-[200px] h-[316px] object-cover rounded-[16px]"
-                  src="{{url('assets/images/patrika-gate.jpg')}}"
+                  src="./images/patrika-gate.jpg"
                   alt=""
                   data-index="4"
                 />
@@ -703,7 +703,7 @@
             <div class="relative">
               <img
                 class="w-full gallery-img h-[200px] cursor-pointer lg:h-[313px] object-cover rounded-[16px]"
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 data-index="5"
                 alt=""
               />
@@ -729,7 +729,7 @@
           us
         </p>
       </div>
-      <div class="swiper mySwiper2">
+      <div id="reviewSwiper" class="swiper">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide">
@@ -738,7 +738,7 @@
                 <div class="flex gap-5 items-center">
                   <img
                     class="w-12 h-12 rounded-full"
-                    src="{{url('assets/images/customer-1.png')}}"
+                    src="./images/customer-1.png"
                     alt=""
                   />
                   <div>
@@ -777,7 +777,7 @@
                 <div class="flex gap-5 items-center">
                   <img
                     class="w-12 h-12 rounded-full"
-                    src="{{url('assets/images/customer-1.png')}}"
+                    src="./images/customer-1.png"
                     alt=""
                   />
                   <div>
@@ -816,7 +816,7 @@
                 <div class="flex gap-5 items-center">
                   <img
                     class="w-12 h-12 rounded-full"
-                    src="{{url('assets/images/customer-1.png')}}"
+                    src="./images/customer-1.png"
                     alt=""
                   />
                   <div>
@@ -854,7 +854,7 @@
                 <div class="flex gap-5 items-center">
                   <img
                     class="w-12 h-12 rounded-full"
-                    src="{{url('assets/images/customer-1.png')}}"
+                    src="./images/customer-1.png"
                     alt=""
                   />
                   <div>
@@ -892,7 +892,7 @@
                 <div class="flex gap-5 items-center">
                   <img
                     class="w-12 h-12 rounded-full"
-                    src="{{url('assets/images/customer-1.png')}}"
+                    src="./images/customer-1.png"
                     alt=""
                   />
                   <div>
@@ -928,7 +928,7 @@
         </div>
       </div>
 
-      <div class="swiper mt-10 mySwiper2">
+      <div id="reviewSwiper" class="swiper mt-10">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide">
@@ -937,7 +937,7 @@
                 <div class="flex gap-5 items-center">
                   <img
                     class="w-12 h-12 rounded-full"
-                    src="{{url('assets/images/customer-1.png')}}"
+                    src="./images/customer-1.png"
                     alt=""
                   />
                   <div>
@@ -976,7 +976,7 @@
                 <div class="flex gap-5 items-center">
                   <img
                     class="w-12 h-12 rounded-full"
-                    src="{{url('assets/images/customer-1.png')}}"
+                    src="./images/customer-1.png"
                     alt=""
                   />
                   <div>
@@ -1015,7 +1015,7 @@
                 <div class="flex gap-5 items-center">
                   <img
                     class="w-12 h-12 rounded-full"
-                    src="{{url('assets/images/customer-1.png')}}"
+                    src="./images/customer-1.png"
                     alt=""
                   />
                   <div>
@@ -1053,7 +1053,7 @@
                 <div class="flex gap-5 items-center">
                   <img
                     class="w-12 h-12 rounded-full"
-                    src="{{url('assets/images/customer-1.png')}}"
+                    src="./images/customer-1.png"
                     alt=""
                   />
                   <div>
@@ -1091,7 +1091,7 @@
                 <div class="flex gap-5 items-center">
                   <img
                     class="w-12 h-12 rounded-full"
-                    src="{{url('assets/images/customer-1.png')}}"
+                    src="./images/customer-1.png"
                     alt=""
                   />
                   <div>
@@ -1144,14 +1144,14 @@
           <a href="#" class="font-semibold text-[#A95C32]">Explore More</a>
         </div>
       </div>
-      <div class="swiper mySwiper4">
+      <div id="tourPackagesSwiper" class="swiper">
         <div class="swiper-wrapper">
           <!-- Slide Start -->
           <div class="swiper-slide">
             <div class="border border-[#CAC9C9] rounded-xl px-3 py-3">
               <img
                 class="rounded-xl h-[370px] object-cover"
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt=""
               />
               <div class="pt-2">
@@ -1176,7 +1176,7 @@
             <div class="border border-[#CAC9C9] rounded-xl px-3 py-3">
               <img
                 class="rounded-xl h-[370px] object-cover"
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt=""
               />
               <div class="pt-2">
@@ -1201,7 +1201,7 @@
             <div class="border border-[#CAC9C9] rounded-xl px-3 py-3">
               <img
                 class="rounded-xl h-[370px] object-cover"
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt=""
               />
               <div class="pt-2">
@@ -1226,7 +1226,7 @@
             <div class="border border-[#CAC9C9] rounded-xl px-3 py-3">
               <img
                 class="rounded-xl h-[370px] object-cover"
-                src="{{url('assets/images/architecturel-city-palace.jpg')}}"
+                src="./images/architecturel-city-palace.jpg"
                 alt=""
               />
               <div class="pt-2">
@@ -1252,5 +1252,4 @@
         </div>
       </div>
     </section>
-
-@endsection
+    @endsection

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,8 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <link rel="stylesheet" href="{{url('assets/css/style.css')}}" />
+    <link rel="stylesheet" href="{{url('css/style.css')}}" />
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
@@ -32,7 +31,7 @@
           <a href="{{url('/')}}">
             <img
               class="w-[100px] md:w-[120px] lg:w-[140px]"
-              src="{{url('assets/images/logo.png')}}"
+              src="{{url('images/logo.png')}}"
               alt="Logo"
             />
           </a>
@@ -131,7 +130,7 @@
       >
         <ul id="mobileMenuLinks" class="flex flex-col gap-4">
           <li>
-            <a href="./index.html">Home</a>
+            <a href="{{url('/')}}">Home</a>
           </li>
           <li>
             <button
