@@ -100,25 +100,19 @@
         <div id="capturedMomentSwiper" class="swiper mx-auto rounded-[16px]">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
+                @foreach ($capturedMoments as $capturedMoment)
+                    
+         
                 <div class="swiper-slide">
-                    <img data-index="0" src="./images/tourist-curring.jpg"
+                    <img data-index="0" src="{{url('uploads/'.$capturedMoment->image)}}"
                         class="h-[400px] lg:h-[600px] gallery-img cursor-pointer sliderImage w-full object-cover rounded-[16px]"
                         alt="" />
                 </div>
+                       @endforeach
 
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <img data-index="1" src="./images/tourist-curring.jpg"
-                        class="h-[400px] lg:h-[600px] gallery-img cursor-pointer sliderImage w-full object-cover rounded-[16px]"
-                        alt="" />
-                </div>
+           
 
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <img data-index="2" src="./images/tourist-curring.jpg"
-                        class="h-[400px] gallery-img cursor-pointer lg:h-[600px] sliderImage w-full object-cover rounded-[16px]"
-                        alt="" />
-                </div>
+            
             </div>
 
             <!-- Navigation buttons -->
@@ -218,38 +212,20 @@
 
         <div id="videoSlider2" class="swiper mx-auto">
             <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <div class="tour-trip-col flex items-center justify-center">
-                        <i class="fa-solid fa-play text-[22px] flex cursor-pointer justify-center items-center text-[#A95C32] bg-white opacity-70 h-14 w-14 rounded-full"
-                            data-video-url="https://www.youtube.com/embed/HcOc7P5BMi4"></i>
-                    </div>
-                </div>
-
+    
                 <!-- Slide 2 -->
+                @foreach ($vodeo as $video)
+                    
+             
                 <div class="swiper-slide">
                     <div class="tour-trip-col flex items-center justify-center">
                         <i class="fa-solid fa-play text-[22px] flex cursor-pointer justify-center items-center text-[#A95C32] bg-white opacity-70 h-14 w-14 rounded-full"
-                            data-video-url="https://www.youtube.com/embed/HcOc7P5BMi4"></i>
+                            data-video-url="{{$video->video_link}}"></i>
                     </div>
                 </div>
+                   @endforeach
 
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <div class="tour-trip-col flex items-center justify-center">
-                        <i class="fa-solid fa-play text-[22px] flex cursor-pointer justify-center items-center text-[#A95C32] bg-white opacity-70 h-14 w-14 rounded-full"
-                            data-video-url="https://www.youtube.com/embed/HcOc7P5BMi4"></i>
-                    </div>
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="swiper-slide">
-                    <div class="tour-trip-col flex items-center justify-center">
-                        <i
-                            class="fa-solid fa-play text-[22px] flex cursor-pointer justify-center items-center text-[#A95C32] bg-white opacity-70 h-14 w-14 rounded-full"></i>
-                    </div>
-                </div>
-
+           
                 <!-- More swiper-slide blocks as needed -->
             </div>
         </div>
