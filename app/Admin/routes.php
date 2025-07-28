@@ -19,5 +19,6 @@ Route::group([
     $router->resource('contacts', ContactController::class);
     $router->resource('galleries', GalleryController::class);
     $router->resource('videos', VideoController::class);
+    $router->resource('captured-moments', CapturedMomentController::class);
 
 });

@@ -6,16 +6,16 @@ use OpenAdmin\Admin\Controllers\AdminController;
 use OpenAdmin\Admin\Form;
 use OpenAdmin\Admin\Grid;
 use OpenAdmin\Admin\Show;
-use \App\Models\Video;
+use \App\Models\CapturedMoment;
 
-class VideoController extends AdminController
+class CapturedMomentController extends AdminController
 {
     /**
      * Title for current resource.
      *
      * @var string
      */
-    protected $title = 'Video';
+    protected $title = 'CapturedMoment';
 
     /**
      * Make a grid builder.
@@ -24,17 +24,11 @@ class VideoController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new Video());
+        $grid = new Grid(new CapturedMoment());
 
         $grid->column('id', __('Id'));
-        $grid->column('image', __('Image'))->image('/uploads/' ,'100','100')->sortable();
-        $grid->column('video_link', __('Video link'))->sortable();
+        $grid->column('image', __('Image'))->image('/uploads/', '100', '100')->sortable();
 
-   $grid->column('created_at', __('Created at'))
-    ->display(function ($createdAt) {
-        return Carbon::parse($createdAt)->format('d F Y'); // e.g., 23 July 2025
-    })
-    ->sortable();
 
         return $grid;
     }
@@ -47,12 +41,10 @@ class VideoController extends AdminController
      */
     protected function detail($id)
     {
-        $show = new Show(Video::findOrFail($id));
+        $show = new Show(CapturedMoment::findOrFail($id));
 
         $show->field('id', __('Id'));
         $show->field('image', __('Image'));
-        $show->field('video_link', __('Video link'));
-        $show->field('alt', __('Alt'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -66,11 +58,9 @@ class VideoController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new Video());
+        $form = new Form(new CapturedMoment());
 
         $form->image('image', __('Image'));
-        $form->text('video_link', __('Video link'));
-        $form->text('alt', __('Alt'));
 
         return $form;
     }

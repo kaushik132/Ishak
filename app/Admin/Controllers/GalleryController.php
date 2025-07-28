@@ -28,8 +28,8 @@ class GalleryController extends AdminController
         $grid = new Grid(new Gallery());
 
         $grid->column('id', __('Id'))->sortable();
-        $grid->column('image', __('Image'))->sortable();
-        $grid->column('alt', __('Alt'))->sortable();
+        $grid->column('image', __('Image'))->image('/uploads/' ,'100','100')->sortable();
+       
         
     $grid->column('created_at', __('Created at'))
     ->display(function ($createdAt) {
@@ -72,6 +72,8 @@ class GalleryController extends AdminController
         $form = new Form(new Gallery());
 
         $form->image('image', __('Image'));
+        $form->text('name', __('Name'));
+        $form->textarea('content', __('Content'));
         $form->text('alt', __('Alt'));
 
         return $form;
