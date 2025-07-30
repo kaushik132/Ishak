@@ -493,337 +493,111 @@
         <div id="reviewSwiper" class="swiper">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-                        <div class="flex justify-between items-center mb-4">
-                            <div class="flex gap-5 items-center">
-                                <img class="w-12 h-12 rounded-full" src="./images/customer-1.png" alt="" />
-                                <div>
-                                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                                    <p class="text-[15px]">CFO, Company</p>
-                                </div>
-                            </div>
-                            <div>
-                                <ul class="flex gap-1">
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li>
-                                        <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                                    </li>
-                                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <div>
-                            <i class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"></i>
-                            <p class="mt-2 font-semibold text-[14px]">
-                                UI Wiki transformed our design process! The templates are
-                                modern, user-friendly, and saved us countless hours.
-                            </p>
-                        </div>
+
+
+@foreach ($customers as $customers)
+    <div class="swiper-slide">
+        <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
+            <div class="flex justify-between items-center mb-4">
+                <div class="flex gap-5 items-center">
+                    <img class="w-12 h-12 rounded-full" src="{{url('uploads/'.$customers->image)}}" alt="" />
+                    <div>
+                        <p class="text-[15px] font-semibold">{{$customers->name}}</p>
                     </div>
                 </div>
+                <div>
+                    <ul class="flex gap-1">
+                        @php
+                            $fullStars = floor($customers->star);
+                            $halfStar = ($customers->star - $fullStars) >= 0.5 ? 1 : 0;
+                            $emptyStars = 5 - $fullStars - $halfStar;
+                        @endphp
 
-                <div class="swiper-slide">
-                    <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-                        <div class="flex justify-between items-center mb-4">
-                            <div class="flex gap-5 items-center">
-                                <img class="w-12 h-12 rounded-full" src="./images/customer-1.png" alt="" />
-                                <div>
-                                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                                    <p class="text-[15px]">CFO, Company</p>
-                                </div>
-                            </div>
-                            <div>
-                                <ul class="flex gap-1">
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li>
-                                        <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                                    </li>
-                                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                                </ul>
-                            </div>
-                        </div>
+                        {{-- Full Stars --}}
+                        @for ($i = 0; $i < $fullStars; $i++)
+                            <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
+                        @endfor
 
-                        <div>
-                            <i class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"></i>
-                            <p class="mt-2 font-semibold text-[14px]">
-                                UI Wiki transformed our design process! The templates are
-                                modern, user-friendly, and saved us countless hours.
-                            </p>
-                        </div>
-                    </div>
+                        {{-- Half Star --}}
+                        @if ($halfStar)
+                            <li><i class="fa-solid fa-star-half text-[#A95C32]"></i></li>
+                        @endif
+
+                        {{-- Empty Stars --}}
+                        @for ($i = 0; $i < $emptyStars; $i++)
+                            <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
+                        @endfor
+                    </ul>
                 </div>
+            </div>
 
-                <div class="swiper-slide">
-                    <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-                        <div class="flex justify-between items-center mb-4">
-                            <div class="flex gap-5 items-center">
-                                <img class="w-12 h-12 rounded-full" src="./images/customer-1.png" alt="" />
-                                <div>
-                                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                                    <p class="text-[15px]">CFO, Company</p>
-                                </div>
-                            </div>
-                            <div>
-                                <ul class="flex gap-1">
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li>
-                                        <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                                    </li>
-                                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                                </ul>
-                            </div>
-                        </div>
+            <div>
+                <i class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"></i>
+                <p class="mt-2 font-semibold text-[14px]">
+                    {{$customers->message}}
+                </p>
+            </div>
+        </div>
+    </div>
+@endforeach
 
-                        <div>
-                            <i class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"></i>
-                            <p class="mt-2 font-semibold text-[14px]">
-                                UI Wiki transformed our design process! The templates are
-                                modern, user-friendly, and saved us countless hours.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-                        <div class="flex justify-between items-center mb-4">
-                            <div class="flex gap-5 items-center">
-                                <img class="w-12 h-12 rounded-full" src="./images/customer-1.png" alt="" />
-                                <div>
-                                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                                    <p class="text-[15px]">CFO, Company</p>
-                                </div>
-                            </div>
-                            <div>
-                                <ul class="flex gap-1">
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li>
-                                        <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                                    </li>
-                                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div>
-                            <i class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"></i>
-                            <p class="mt-2 font-semibold text-[14px]">
-                                UI Wiki transformed our design process! The templates are
-                                modern, user-friendly, and saved us countless hours.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-                        <div class="flex justify-between items-center mb-4">
-                            <div class="flex gap-5 items-center">
-                                <img class="w-12 h-12 rounded-full" src="./images/customer-1.png" alt="" />
-                                <div>
-                                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                                    <p class="text-[15px]">CFO, Company</p>
-                                </div>
-                            </div>
-                            <div>
-                                <ul class="flex gap-1">
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li>
-                                        <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                                    </li>
-                                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div>
-                            <i class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"></i>
-                            <p class="mt-2 font-semibold text-[14px]">
-                                UI Wiki transformed our design process! The templates are
-                                modern, user-friendly, and saved us countless hours.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+         
+           
                 <!-- Add more swiper-slide divs here for more testimonials -->
             </div>
         </div>
 
         <div id="reviewSwiper" class="swiper mt-10">
             <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-                        <div class="flex justify-between items-center mb-4">
-                            <div class="flex gap-5 items-center">
-                                <img class="w-12 h-12 rounded-full" src="./images/customer-1.png" alt="" />
-                                <div>
-                                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                                    <p class="text-[15px]">CFO, Company</p>
-                                </div>
-                            </div>
-                            <div>
-                                <ul class="flex gap-1">
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li>
-                                        <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                                    </li>
-                                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div>
-                            <i class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"></i>
-                            <p class="mt-2 font-semibold text-[14px]">
-                                UI Wiki transformed our design process! The templates are
-                                modern, user-friendly, and saved us countless hours.
-                            </p>
-                        </div>
+             
+@foreach ($customer as $customer)
+    <div class="swiper-slide">
+        <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
+            <div class="flex justify-between items-center mb-4">
+                <div class="flex gap-5 items-center">
+                    <img class="w-12 h-12 rounded-full" src="{{ url('uploads/'. $customer->image) }}" alt="" />
+                    <div>
+                        <p class="text-[15px] font-semibold">{{ $customer->name }}</p>
                     </div>
                 </div>
+                <div>
+                    <ul class="flex gap-1">
+                        @php
+                            $fullStars = floor($customer->star);
+                            $halfStar = ($customer->star - $fullStars) >= 0.5 ? 1 : 0;
+                            $emptyStars = 5 - $fullStars - $halfStar;
+                        @endphp
 
-                <div class="swiper-slide">
-                    <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-                        <div class="flex justify-between items-center mb-4">
-                            <div class="flex gap-5 items-center">
-                                <img class="w-12 h-12 rounded-full" src="./images/customer-1.png" alt="" />
-                                <div>
-                                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                                    <p class="text-[15px]">CFO, Company</p>
-                                </div>
-                            </div>
-                            <div>
-                                <ul class="flex gap-1">
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li>
-                                        <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                                    </li>
-                                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                                </ul>
-                            </div>
-                        </div>
+                        {{-- Full Stars --}}
+                        @for ($i = 0; $i < $fullStars; $i++)
+                            <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
+                        @endfor
 
-                        <div>
-                            <i class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"></i>
-                            <p class="mt-2 font-semibold text-[14px]">
-                                UI Wiki transformed our design process! The templates are
-                                modern, user-friendly, and saved us countless hours.
-                            </p>
-                        </div>
-                    </div>
+                        {{-- Half Star --}}
+                        @if ($halfStar)
+                            <li><i class="fa-solid fa-star-half text-[#A95C32]"></i></li>
+                        @endif
+
+                        {{-- Empty Stars --}}
+                        @for ($i = 0; $i < $emptyStars; $i++)
+                            <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
+                        @endfor
+                    </ul>
                 </div>
+            </div>
 
-                <div class="swiper-slide">
-                    <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-                        <div class="flex justify-between items-center mb-4">
-                            <div class="flex gap-5 items-center">
-                                <img class="w-12 h-12 rounded-full" src="./images/customer-1.png" alt="" />
-                                <div>
-                                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                                    <p class="text-[15px]">CFO, Company</p>
-                                </div>
-                            </div>
-                            <div>
-                                <ul class="flex gap-1">
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li>
-                                        <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                                    </li>
-                                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                                </ul>
-                            </div>
-                        </div>
+            <div>
+                <i class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"></i>
+                <p class="mt-2 font-semibold text-[14px]">
+                    {{ $customer->message }}
+                </p>
+            </div>
+        </div>
+    </div>
+@endforeach
 
-                        <div>
-                            <i class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"></i>
-                            <p class="mt-2 font-semibold text-[14px]">
-                                UI Wiki transformed our design process! The templates are
-                                modern, user-friendly, and saved us countless hours.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-                        <div class="flex justify-between items-center mb-4">
-                            <div class="flex gap-5 items-center">
-                                <img class="w-12 h-12 rounded-full" src="./images/customer-1.png" alt="" />
-                                <div>
-                                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                                    <p class="text-[15px]">CFO, Company</p>
-                                </div>
-                            </div>
-                            <div>
-                                <ul class="flex gap-1">
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li>
-                                        <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                                    </li>
-                                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div>
-                            <i class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"></i>
-                            <p class="mt-2 font-semibold text-[14px]">
-                                UI Wiki transformed our design process! The templates are
-                                modern, user-friendly, and saved us countless hours.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-                        <div class="flex justify-between items-center mb-4">
-                            <div class="flex gap-5 items-center">
-                                <img class="w-12 h-12 rounded-full" src="./images/customer-1.png" alt="" />
-                                <div>
-                                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                                    <p class="text-[15px]">CFO, Company</p>
-                                </div>
-                            </div>
-                            <div>
-                                <ul class="flex gap-1">
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                                    <li>
-                                        <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                                    </li>
-                                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div>
-                            <i class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"></i>
-                            <p class="mt-2 font-semibold text-[14px]">
-                                UI Wiki transformed our design process! The templates are
-                                modern, user-friendly, and saved us countless hours.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+           
                 <!-- Add more swiper-slide divs here for more testimonials -->
             </div>
         </div>
@@ -848,57 +622,21 @@
         <div id="tourPackagesSwiper" class="swiper">
             <div class="swiper-wrapper">
                 <!-- Slide Start -->
-                <div class="swiper-slide">
-                    <div class="border border-[#CAC9C9] rounded-xl px-3 py-3">
-                        <img class="rounded-xl h-[370px] object-cover" src="./images/architecturel-city-palace.jpg"
-                            alt="" />
-                        <div class="pt-2">
-                            <h3 class="font-semibold">Amber Fort & City Place</h3>
-                            <p class="text-[10px] font-semibold">
-                                A glimpse into the breathtaking places unforgettable...
-                            </p>
-                            <div class="flex justify-between items-center my-3">
-                                <h1 class="font-semibold text-[19px]">₹11,000</h1>
-                                <a href="./tour-details.html"
-                                    class="border-[#A95C32] border text-[#A95C32] text-[14px] font-semibold px-6 py-2 rounded-[30px]">
-                                    Book Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @foreach ($tour as $tours)
+                    
 
                 <div class="swiper-slide">
                     <div class="border border-[#CAC9C9] rounded-xl px-3 py-3">
-                        <img class="rounded-xl h-[370px] object-cover" src="./images/architecturel-city-palace.jpg"
+                        <img class="rounded-xl h-[370px] object-cover" src="{{ url('uploads/'.$tours->thumnail_image) }}"
                             alt="" />
                         <div class="pt-2">
-                            <h3 class="font-semibold">Amber Fort & City Place</h3>
+                            <h3 class="font-semibold">{{$tours->title}}</h3>
                             <p class="text-[10px] font-semibold">
-                                A glimpse into the breathtaking places unforgettable...
-                            </p>
-                            <div class="flex justify-between items-center my-3">
-                                <h1 class="font-semibold text-[19px]">₹11,000</h1>
-                                <a href="./tour-details.html"
-                                    class="border-[#A95C32] border text-[#A95C32] text-[14px] font-semibold px-6 py-2 rounded-[30px]">
-                                    Book Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                      {{ \Illuminate\Support\Str::limit(strip_tags($tours->short_description), 50) }}
 
-                <div class="swiper-slide">
-                    <div class="border border-[#CAC9C9] rounded-xl px-3 py-3">
-                        <img class="rounded-xl h-[370px] object-cover" src="./images/architecturel-city-palace.jpg"
-                            alt="" />
-                        <div class="pt-2">
-                            <h3 class="font-semibold">Amber Fort & City Place</h3>
-                            <p class="text-[10px] font-semibold">
-                                A glimpse into the breathtaking places unforgettable...
                             </p>
                             <div class="flex justify-between items-center my-3">
-                                <h1 class="font-semibold text-[19px]">₹11,000</h1>
+                                <h1 class="font-semibold text-[19px]">₹{{$tours->price}}</h1>
                                 <a href="./tour-details.html"
                                     class="border-[#A95C32] border text-[#A95C32] text-[14px] font-semibold px-6 py-2 rounded-[30px]">
                                     Book Now
@@ -907,29 +645,10 @@
                         </div>
                     </div>
                 </div>
+                                @endforeach
 
-                <div class="swiper-slide">
-                    <div class="border border-[#CAC9C9] rounded-xl px-3 py-3">
-                        <img class="rounded-xl h-[370px] object-cover" src="./images/architecturel-city-palace.jpg"
-                            alt="" />
-                        <div class="pt-2">
-                            <h3 class="font-semibold">Amber Fort & City Place</h3>
-                            <p class="text-[10px] font-semibold">
-                                A glimpse into the breathtaking places unforgettable...
-                            </p>
-                            <div class="flex justify-between items-center my-3">
-                                <h1 class="font-semibold text-[19px]">₹11,000</h1>
-                                <a href="./tour-details.html"
-                                    class="border-[#A95C32] border text-[#A95C32] text-[14px] font-semibold px-6 py-2 rounded-[30px]">
-                                    Book Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <!-- Slide End -->
 
-                <!-- Duplicate the above .swiper-slide block for more slides -->
             </div>
         </div>
     </section>

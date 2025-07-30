@@ -15,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[HomeController::class, 'index']);
-Route::get('/tour',[HomeController::class, 'tour'])->name('Tour');
-Route::get('/tour-details',[HomeController::class, 'tourDetails'])->name('Tour.Details');
+Route::get('/tour/{slug?}',[HomeController::class, 'tour'])->name('Tour');
+Route::get('/tour-details/{slug?}',[HomeController::class, 'tourDetails'])->name('Tour.Details');
 Route::get('/gallery',[HomeController::class, 'gallery']);
 Route::get('/contact-us',[HomeController::class, 'contact']);
+Route::post('/contact-us',[HomeController::class, 'contactpost'])->name('ContactUs');
+
+Route::post('/book-tour',[HomeController::class, 'bookTour'])->name('BookTour');

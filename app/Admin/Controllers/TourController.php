@@ -28,8 +28,9 @@ class TourController extends AdminController
         $grid = new Grid(new Tour());
 
         $grid->column('id', __('Id'));
-        $grid->column('destination_id', __('Destination id'));
-        $grid->column('thumnail_image', __('Thumnail image'));
+        $grid->column('tourCategorys.name', __('Destination id'))->sortable();
+        $grid->column('thumnail_image', __('Thumnail image'))->image('/uploads/', 100 , 100)->sortable();
+        $grid->column('title', __('Title'))->sortable();
      
 
         return $grid;
@@ -90,7 +91,7 @@ class TourController extends AdminController
    $form->tab('Images', function ($form) {
           $form->image('thumnail_image', __('Thumnail image'));
         $form->image('banner_image', __('Banner image'));
-        $form->image('gallery', __('Gallery'));
+        $form->multipleImage('gallery', __('Gallery'));
         });
 
           $form->tab('PackageItinerary', function ($form) {

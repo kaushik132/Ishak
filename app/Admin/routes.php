@@ -20,5 +20,9 @@ Route::group([
     $router->resource('galleries', GalleryController::class);
     $router->resource('videos', VideoController::class);
     $router->resource('captured-moments', CapturedMomentController::class);
+    $router->resource('customers', CustomersController::class);
+    $router->resource('titles', SeoTitleController::class);
+    $router->resource('inclusions', InclusionsController::class);
+    $router->resource('exclusions', ExclusionController::class);
 
 });

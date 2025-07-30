@@ -12,6 +12,8 @@ class Tour extends Model
            protected $casts = [
         
         'itinerarys' =>'array',
+           'gallery' =>'json',
+
   
     ];
 

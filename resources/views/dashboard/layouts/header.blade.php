@@ -59,24 +59,23 @@
               <ul
                 class="absolute left-0 top-full bg-white text-black rounded-md shadow-lg w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300"
               >
+            @if ($tourCategoryss->isNotEmpty())  
+         @foreach ($tourCategoryss as $tourCategorysssa)
+             
+      
                 <li>
                   <a
                     style="color: black !important"
-                    href="{{url('tour')}}"
-                    class="block px-4 py-2 hover:bg-gray-100 rounded-tl-md rounded-tr-md text-sm"
-                    >First Day Tour</a
-                  >
-                </li>
-                <li>
-                  <a
-                    style="color: black !important"
-                    href="{{url('tour')}}"
+                    href="{{url('tour/'.$tourCategorysssa->slug)}}"
                     class="block px-4 py-2 hover:bg-gray-100 rounded-bl-md rounded-br-md text-sm"
-                    >Second Day Tour</a
+                    >{{$tourCategorysssa->name}}</a
                   >
                 </li>
+                @endforeach
+                @endif
               </ul>
             </li>
+               
 
             <li>
               <a href="{{url('gallery')}}" class="text-white text-sm md:text-base"
@@ -144,12 +143,13 @@
               ></i>
             </button>
             <ul id="mobileDropdown" class="pl-4 mt-2 space-y-2 hidden">
+              @foreach ($tourCategoryss as $tourCategoryssa)
+                  
               <li>
-                <a href="{{url('tour')}}" class="block">First Day Tour</a>
+                <a href="{{url('tour')}}" class="block">{{$tourCategoryssa->name}}</a>
               </li>
-              <li>
-                <a href="{{url('tour')}}" class="block">Second Day Tour</a>
-              </li>
+              @endforeach
+            
             </ul>
           </li>
 

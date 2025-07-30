@@ -8,9 +8,14 @@
     </section>
 
     <div class="text-center my-14">
-      <h2 class="text-black text-[20px] lg:text-[48px] font-[500]">
-        First Day Tour in Jaipur
-      </h2>
+
+
+@if ($tourList->isNotEmpty() && isset($tourList[0]->tourCategorys->name))
+    <h2 class="text-black text-[20px] lg:text-[48px] font-[500]">
+        {{ $tourList[0]->tourCategorys->name }} Day Tour in
+    </h2>
+@endif
+
 
       <p class="text-[9px] lg:text-[15px] text-[#808080] mb-7">
         Explore stunning moments from our unforgettable journeys.
@@ -30,21 +35,23 @@
       <div class="swiper" id="tourSwiper">
         <div class="swiper-wrapper">
           <!-- Slide Start -->
+          @foreach ($tourList as $tourLists)
+              
           <div class="swiper-slide">
             <div class="bg-white rounded-[12px] overflow-hidden slide">
               <img
-                src="./images/architecturel-city-palace.jpg"
+                src="{{ asset('uploads/' . $tourLists->thumnail_image) }}"
                 alt="Amber Fort"
                 class="w-full h-[300px] object-cover"
               />
 
               <div class="p-2 space-y-3">
                 <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
+                 {{ $tourLists->title }}
                 </h2>
                 <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
+               {{ \Illuminate\Support\Str::limit($tourLists->short_description, 50) }}
+
                 </p>
 
                 <div class="flex justify-between items-center pt-2">
@@ -52,180 +59,25 @@
                     class="text-lg font-semibold flex items-center gap-1 text-gray-800"
                   >
                     <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
+                    <span class="money leading-none">{{$tourLists->price}}</span>
                   </h3>
 
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
+                  <a href="{{url('tour-details/'.$tourLists->slug)}}" class="book-btn px-3 py-1">
+                    Explore Now
                   </a>
                 </div>
               </div>
             </div>
           </div>
+          @endforeach
 
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
+      
 
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
+       
 
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
+       
 
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+        
 
           <!-- Slide End -->
         </div>
@@ -249,7 +101,7 @@
           <!-- Slide 1 -->
           <div class="swiper-slide">
             <img
-              src="./images/hawa-mahal.jpg"
+              src="{{url('images/hawa-mahal.jpg')}}"
               class="h-[400px] gallery-img lg:h-[600px] sliderImage w-full object-cover rounded-[16px]"
               data-index="0"
               alt=""
@@ -285,7 +137,7 @@
           <!-- Slide 2 -->
           <div class="swiper-slide">
             <img
-              src="./images/patrika-gate.jpg"
+              src="{{url('images/patrika-gate.jpg')}}"
               class="h-[400px] gallery-img lg:h-[600px] sliderImage w-full object-cover rounded-[16px]"
               alt=""
               data-index="1"
@@ -360,10 +212,11 @@
       </div>
     </section>
 
+
     <section class="px-7 pt-14 lg:px-14">
       <div class="mb-6 lg:mb-8">
         <h2 class="text-[18px] lg:text-[26px] font-semibold">
-          Half Day Jaipur City Tour
+          Jaipur Cultural & Sightseeing Tours
         </h2>
         <p class="-mt-1 text-[12px] lg:text-[16px]">
           Explore majestic forts, vibrant bazaars, and timeless traditions
@@ -373,631 +226,47 @@
       <div class="swiper" id="tourSwiper">
         <div class="swiper-wrapper">
           <!-- Slide Start -->
-          <div class="swiper-slide">
-            <div class="bg-white rounded-[12px] overflow-hidden slide">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
 
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
 
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
 
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+   
+@foreach ($alltour as $alltours)
+    
+<div class="swiper-slide">
+  <div class="bg-white slide rounded-[12px] overflow-hidden">
+    <img
+      src="{{ asset('uploads/' . $alltours->thumnail_image) }}"
+      alt="Amber Fort"
+      class="w-full h-[300px] object-cover"
+    />
 
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
+    <div class="p-2 space-y-3">
+      <h2 class="text-xl font-semibold text-gray-800">
+        {{ $alltours->title }}
+      </h2>
+      <p class="text-gray-600 text-sm">
+        {{ \Illuminate\Support\Str::limit($alltours->short_description, 50) }}
+      </p>
 
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
+      <div class="flex justify-between items-center pt-2">
+        <h3
+          class="text-lg font-semibold flex items-center gap-1 text-gray-800"
+        >
+          <i class="fa-solid fa-indian-rupee-sign"></i>
+          <span class="money leading-none">{{$alltours->price}}</span>
+        </h3>
 
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide End -->
-        </div>
+        <a href="{{url('tour-details/'.$alltours->slug)}}" class="book-btn px-3 py-1">
+         Explore Now
+        </a>
       </div>
-    </section>
+    </div>
+  </div>
+</div>
+@endforeach
 
-    <section class="px-7 pt-14 lg:px-14">
-      <div class="mb-6 lg:mb-8">
-        <h2 class="text-[18px] lg:text-[26px] font-semibold">
-          Jaipur Heritage Discovery – Day 1 Tour
-        </h2>
-        <p class="-mt-1 text-[12px] lg:text-[16px]">
-          Explore majestic forts, vibrant bazaars, and timeless traditions
-          across the land of kings.
-        </p>
-      </div>
-      <div class="swiper" id="tourSwiper">
-        <div class="swiper-wrapper">
-          <!-- Slide Start -->
-          <div class="swiper-slide">
-            <div class="bg-white rounded-[12px] overflow-hidden slide">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
 
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide End -->
-        </div>
-      </div>
-    </section>
-
-    <section class="px-7 pt-14 lg:px-14">
-      <div class="mb-6 lg:mb-8">
-        <h2 class="text-[18px] lg:text-[26px] font-semibold">
-          Jaipur Cultural & Sightseeing Tour
-        </h2>
-        <p class="-mt-1 text-[12px] lg:text-[16px]">
-          Explore majestic forts, vibrant bazaars, and timeless traditions
-          across the land of kings.
-        </p>
-      </div>
-      <div class="swiper" id="tourSwiper">
-        <div class="swiper-wrapper">
-          <!-- Slide Start -->
-          <div class="swiper-slide">
-            <div class="bg-white rounded-[12px] overflow-hidden slide">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div class="bg-white slide rounded-[12px] overflow-hidden">
-              <img
-                src="./images/architecturel-city-palace.jpg"
-                alt="Amber Fort"
-                class="w-full h-[300px] object-cover"
-              />
-
-              <div class="p-2 space-y-3">
-                <h2 class="text-xl font-semibold text-gray-800">
-                  Amber Fort & City Palace
-                </h2>
-                <p class="text-gray-600 text-sm">
-                  A glimpse into the breathtaking places and unforgettable
-                  memories we create.
-                </p>
-
-                <div class="flex justify-between items-center pt-2">
-                  <h3
-                    class="text-lg font-semibold flex items-center gap-1 text-gray-800"
-                  >
-                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                    <span class="money leading-none">11,000</span>
-                  </h3>
-
-                  <a href="./tour-details.html" class="book-btn px-3 py-1">
-                    Book Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+        
 
           <!-- Slide End -->
         </div>
@@ -1019,203 +288,63 @@
       <div class="swiper" id="reviewSwiper">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
-          <div class="swiper-slide">
-            <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-              <div class="flex justify-between items-center mb-4">
-                <div class="flex gap-5 items-center">
-                  <img
-                    class="w-12 h-12 rounded-full"
-                    src="./images/customer-1.png"
-                    alt=""
-                  />
-                  <div>
-                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                    <p class="text-[15px]">CFO, Company</p>
-                  </div>
-                </div>
-                <div>
-                  <ul class="flex gap-1">
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li>
-                      <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                    </li>
-                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                  </ul>
-                </div>
-              </div>
 
-              <div>
-                <i
-                  class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"
-                ></i>
-                <p class="mt-2 font-semibold text-[14px]">
-                  UI Wiki transformed our design process! The templates are
-                  modern, user-friendly, and saved us countless hours.
-                </p>
-              </div>
-            </div>
+    @foreach ($allcoustomer as $customer)
+  <div class="swiper-slide">
+    <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
+      <div class="flex justify-between items-center mb-4">
+        <div class="flex gap-5 items-center">
+          <img
+            class="w-12 h-12 rounded-full"
+            src="{{ url('uploads/' . $customer->image) }}"
+            alt="{{ $customer->name }}"
+          />
+          <div>
+            <p class="text-[15px] font-semibold">{{ $customer->name }}</p>
           </div>
+        </div>
+        <div>
+          <ul class="flex gap-1">
+            @php
+              $fullStars = floor($customer->star);
+              $halfStar = ($customer->star - $fullStars) >= 0.5;
+              $emptyStars = 5 - $fullStars - ($halfStar ? 1 : 0);
+            @endphp
 
-          <div class="swiper-slide">
-            <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-              <div class="flex justify-between items-center mb-4">
-                <div class="flex gap-5 items-center">
-                  <img
-                    class="w-12 h-12 rounded-full"
-                    src="./images/customer-1.png"
-                    alt=""
-                  />
-                  <div>
-                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                    <p class="text-[15px]">CFO, Company</p>
-                  </div>
-                </div>
-                <div>
-                  <ul class="flex gap-1">
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li>
-                      <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                    </li>
-                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                  </ul>
-                </div>
-              </div>
+            {{-- Full Stars --}}
+            @for ($i = 0; $i < $fullStars; $i++)
+              <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
+            @endfor
 
-              <div>
-                <i
-                  class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"
-                ></i>
-                <p class="mt-2 font-semibold text-[14px]">
-                  UI Wiki transformed our design process! The templates are
-                  modern, user-friendly, and saved us countless hours.
-                </p>
-              </div>
-            </div>
-          </div>
+            {{-- Half Star --}}
+            @if ($halfStar)
+              <li><i class="fa-solid fa-star-half text-[#A95C32]"></i></li>
+            @endif
 
-          <div class="swiper-slide">
-            <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-              <div class="flex justify-between items-center mb-4">
-                <div class="flex gap-5 items-center">
-                  <img
-                    class="w-12 h-12 rounded-full"
-                    src="./images/customer-1.png"
-                    alt=""
-                  />
-                  <div>
-                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                    <p class="text-[15px]">CFO, Company</p>
-                  </div>
-                </div>
-                <div>
-                  <ul class="flex gap-1">
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li>
-                      <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                    </li>
-                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                  </ul>
-                </div>
-              </div>
+            {{-- Empty Stars --}}
+            @for ($i = 0; $i < $emptyStars; $i++)
+              <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
+            @endfor
+          </ul>
+        </div>
+      </div>
 
-              <div>
-                <i
-                  class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"
-                ></i>
-                <p class="mt-2 font-semibold text-[14px]">
-                  UI Wiki transformed our design process! The templates are
-                  modern, user-friendly, and saved us countless hours.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-              <div class="flex justify-between items-center mb-4">
-                <div class="flex gap-5 items-center">
-                  <img
-                    class="w-12 h-12 rounded-full"
-                    src="./images/customer-1.png"
-                    alt=""
-                  />
-                  <div>
-                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                    <p class="text-[15px]">CFO, Company</p>
-                  </div>
-                </div>
-                <div>
-                  <ul class="flex gap-1">
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li>
-                      <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                    </li>
-                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                  </ul>
-                </div>
-              </div>
+      <div>
+        <i class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"></i>
+        <p class="mt-2 font-semibold text-[14px]">
+          {{ $customer->message }}
+        </p>
+      </div>
+    </div>
+  </div>
+@endforeach
 
-              <div>
-                <i
-                  class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"
-                ></i>
-                <p class="mt-2 font-semibold text-[14px]">
-                  UI Wiki transformed our design process! The templates are
-                  modern, user-friendly, and saved us countless hours.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-[#F8F8F8] px-8 py-6 rounded-[16px]">
-              <div class="flex justify-between items-center mb-4">
-                <div class="flex gap-5 items-center">
-                  <img
-                    class="w-12 h-12 rounded-full"
-                    src="./images/customer-1.png"
-                    alt=""
-                  />
-                  <div>
-                    <p class="text-[15px] font-semibold">Harry Maguire</p>
-                    <p class="text-[15px]">CFO, Company</p>
-                  </div>
-                </div>
-                <div>
-                  <ul class="flex gap-1">
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li><i class="fa-solid fa-star text-[#A95C32]"></i></li>
-                    <li>
-                      <i class="fa-solid fa-star-half text-[#A95C32]"></i>
-                    </li>
-                    <li><i class="fa-solid fa-star text-[#DCDCDC]"></i></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div>
-                <i
-                  class="fa-solid fa-quote-left text-[#A95C32] text-[38px]"
-                ></i>
-                <p class="mt-2 font-semibold text-[14px]">
-                  UI Wiki transformed our design process! The templates are
-                  modern, user-friendly, and saved us countless hours.
-                </p>
-              </div>
-            </div>
-          </div>
+    
           <!-- Add more swiper-slide divs here for more testimonials -->
         </div>
       </div>
 
-      <div class="swiper mt-10" id="reviewSwiper">
+      {{-- <div class="swiper mt-10" id="reviewSwiper">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide">
@@ -1412,6 +541,6 @@
           </div>
           <!-- Add more swiper-slide divs here for more testimonials -->
         </div>
-      </div>
+      </div> --}}
     </section>
 @endsection
