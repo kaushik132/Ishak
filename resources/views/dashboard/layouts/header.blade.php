@@ -124,7 +124,7 @@
             class="flex items-center px-6 xl:px-8 py-3 xl:py-4 rounded-[30px] gap-4 xl:gap-6"
           >
             <li class="mt-1">
-              <a href="#">
+              <a href="https://api.whatsapp.com/send/?phone={{$info->whatsapp_phone}}&text=Hello%20Ishak%20Tours%20and%20Travels" target="_blank">
                 <i
                   class="fa-brands fa-whatsapp text-white text-[20px] md:text-[20px]"
                 ></i>
@@ -135,7 +135,7 @@
                 <i
                   class="fa-solid fa-phone text-white text-[14px] md:text-[16px]"
                 ></i>
-                <span class="ml-1">+91 8874567567</span>
+                <span class="ml-1">{{$info->phone}}</span>
               </a>
             </li>
           </ul>
@@ -186,8 +186,8 @@
           <li><a href="{{url('gallery')}}">Gallery</a></li>
           <li><a href="{{url('contact-us')}}">Contact Us</a></li>
           <li class="flex gap-4">
-            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#"
+            <a href="https://api.whatsapp.com/send/?phone={{$info->whatsapp_phone}}&text=Hello%20Ishak%20Tours%20and%20Travels" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:{{$info->phone}}"
               ><i class="fa-solid fa-phone"></i> <span>+91 8874567567</span></a
             >
           </li>

@@ -16,6 +16,7 @@ use \App\Models\Customers;
 use \App\Models\Title;
 use \App\Models\Inclusions;
 use \App\Models\Exclusion;
+use \App\Models\Info;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -24,8 +25,10 @@ class HomeController extends Controller
     {
         $tourCategoryss = Tourcategory::all();
         $tourss = Tour::all();
+        $info = Info::first();
         View::share('tourCategoryss', $tourCategoryss);
         View::share('tourss', $tourss);
+        View::share('info', $info);
     }
     public function index()
     {

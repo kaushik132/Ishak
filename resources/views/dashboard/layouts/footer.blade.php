@@ -14,7 +14,7 @@
           <ul class="flex gap-4 mt-7 justify-center lg:justify-start">
             <li>
               <a
-                href="{{url('/')}}"
+                href="{{$info->twitter_link}}"
                 class="h-10 w-10 border border-[#f1f1f1] flex justify-center items-center rounded-full"
                 ><i class="fa-brands fa-x-twitter"></i
               ></a>
@@ -22,7 +22,7 @@
 
             <li>
               <a
-                href="#"
+                href="{{$info->facebook_link}}"
                 class="h-10 w-10 border border-[#f1f1f1] flex justify-center items-center rounded-full"
                 ><i class="fa-brands fa-facebook"></i
               ></a>
@@ -30,7 +30,7 @@
 
             <li>
               <a
-                href="#"
+                href="{{$info->instagram_link}}"
                 class="h-10 w-10 border border-[#f1f1f1] flex justify-center items-center rounded-full"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
@@ -38,7 +38,7 @@
 
             <li>
               <a
-                href="#"
+                href="{{$info->linkedin_link}}"
                 class="h-10 w-10 border border-[#f1f1f1] flex justify-center items-center rounded-full"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
@@ -116,23 +116,23 @@
     >
       <ul>
         <li>
-          <a href="#" class="flex justify-center items-center mb-4"
+          <a href="{{$info->facebook_link}}" class="flex justify-center items-center mb-4"
             ><i class="fa-brands fa-facebook text-white"></i
           ></a>
         </li>
 
         <li>
-          <a href="#" class="flex justify-center items-center mb-4"
+          <a href="{{$info->youtube_link}}" class="flex justify-center items-center mb-4"
             ><i class="fa-brands fa-youtube text-white"></i
           ></a>
         </li>
         <li>
-          <a href="#" class="flex justify-center items-center mb-4"
+          <a href="{{$info->google_map_link}}" class="flex justify-center items-center mb-4"
             ><i class="fa-brands fa-google text-white"></i
           ></a>
         </li>
         <li>
-          <a href="#" class="flex justify-center items-center"
+          <a href="{{$info->instagram_link}}" class="flex justify-center items-center"
             ><i class="fa-brands fa-instagram text-white"></i
           ></a>
         </li>

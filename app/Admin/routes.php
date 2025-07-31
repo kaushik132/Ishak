@@ -24,5 +24,5 @@ Route::group([
     $router->resource('titles', SeoTitleController::class);
     $router->resource('inclusions', InclusionsController::class);
     $router->resource('exclusions', ExclusionController::class);
-
+    $router->resource('infos', InfoController::class);
 });
