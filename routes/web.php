@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SitemapController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Route::get('/contact-us',[HomeController::class, 'contact']);
 Route::post('/contact-us',[HomeController::class, 'contactpost'])->name('ContactUs');
 
 Route::post('/book-tour',[HomeController::class, 'bookTour'])->name('Bookyour');
+
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
