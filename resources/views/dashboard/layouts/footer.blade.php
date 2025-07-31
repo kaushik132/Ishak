@@ -15,6 +15,7 @@
             <li>
               <a
                 href="{{$info->twitter_link}}"
+                 target="_blank"
                 class="h-10 w-10 border border-[#f1f1f1] flex justify-center items-center rounded-full"
                 ><i class="fa-brands fa-x-twitter"></i
               ></a>
@@ -23,6 +24,7 @@
             <li>
               <a
                 href="{{$info->facebook_link}}"
+                 target="_blank"
                 class="h-10 w-10 border border-[#f1f1f1] flex justify-center items-center rounded-full"
                 ><i class="fa-brands fa-facebook"></i
               ></a>
@@ -31,6 +33,7 @@
             <li>
               <a
                 href="{{$info->instagram_link}}"
+                 target="_blank"
                 class="h-10 w-10 border border-[#f1f1f1] flex justify-center items-center rounded-full"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
@@ -39,6 +42,7 @@
             <li>
               <a
                 href="{{$info->linkedin_link}}"
+                 target="_blank"
                 class="h-10 w-10 border border-[#f1f1f1] flex justify-center items-center rounded-full"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
@@ -117,22 +121,26 @@
       <ul>
         <li>
           <a href="{{$info->facebook_link}}" class="flex justify-center items-center mb-4"
+            target="_blank"
             ><i class="fa-brands fa-facebook text-white"></i
           ></a>
         </li>
 
         <li>
           <a href="{{$info->youtube_link}}" class="flex justify-center items-center mb-4"
+             target="_blank"
             ><i class="fa-brands fa-youtube text-white"></i
           ></a>
         </li>
         <li>
           <a href="{{$info->google_map_link}}" class="flex justify-center items-center mb-4"
+             target="_blank"
             ><i class="fa-brands fa-google text-white"></i
           ></a>
         </li>
         <li>
           <a href="{{$info->instagram_link}}" class="flex justify-center items-center"
+             target="_blank"
             ><i class="fa-brands fa-instagram text-white"></i
           ></a>
         </li>

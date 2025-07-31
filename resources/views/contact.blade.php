@@ -26,7 +26,7 @@
         <div class="col-span-1">
           <div class="left-section">
             <img
-              src="./images/sandstone.jpg"
+              src="{{url('images/sandstone.jpg')}}"
               alt="Gateway of India"
               class="img-fluid w-full"
             />
@@ -124,7 +124,7 @@
               <i class="fas fa-envelope"></i>
               <div class="info-text">
                 <strong>Email</strong>
-                <p>hello@uiwiki.co</p>
+                <p>{{$info->email}}</p>
               </div>
             </div>
 
@@ -132,7 +132,7 @@
               <i class="fas fa-phone"></i>
               <div class="info-text">
                 <strong>Phone</strong>
-                <p>Office: +91 6232511522</p>
+                <p>Office: {{$info->phone}}</p>
               </div>
             </div>
 
@@ -140,7 +140,7 @@
               <i class="fas fa-map-marker-alt"></i>
               <div class="info-text">
                 <strong>Location</strong>
-                <p>Office : 123 Maple Street, Spring field</p>
+                <p>Office : {{$info->address}}</p>
               </div>
             </div>
           </div>
@@ -150,7 +150,7 @@
 
     <section>
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609968054!2d72.74109940617357!3d19.08219783915542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63b687c76b3%3A0x68c4b9b5db49c5e3!2sGateway%20Of%20India%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1620024055747!5m2!1sen!2sin"
+        src="{{$info->map}}"
         width="100%"
         style="border: 0"
         allowfullscreen=""

@@ -85,6 +85,7 @@
                     <div>
                         <label class="font-semibold text-[15px]">Full Name</label>
                         <input  type="text" name="name"
+                        oninput="this.value = this.value.replace(/[^A-Za-z+.]/g, '').replace(/(\..*?)\..*/g, '$1');"
                             class="mt-1 border border-gray-300 rounded-md text-[12px] p-2 w-full"
                             placeholder="Your Full Name" />
                     </div>
@@ -98,7 +99,8 @@
 
                     <div class="mt-3">
                         <label class="font-semibold text-[15px]">Phone Number</label>
-                        <input type="text" name="phone"
+                        <input type="text" name="phone" maxlength="10"
+                        oninput="this.value = this.value.replace(/[^0-9+.]/g, '').replace(/(\..*?)\..*/g, '$1');"
                             class="mt-1 border border-gray-300 rounded-md text-[12px] p-2 w-full"
                             placeholder="Your Phone Number" />
                     </div>
