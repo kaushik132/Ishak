@@ -10,9 +10,13 @@
     <div class="text-center my-14">
 
 
-@if ($tourList->isNotEmpty() && isset($tourList[0]->tourCategorys->name))
+@if (request()->is('tour'))
     <h2 class="text-black text-[20px] lg:text-[48px] font-[500]">
-        {{ $tourList[0]->tourCategorys->name }} Day Tour in
+        All Tour in Jaipur
+    </h2>
+@elseif ($tourList->isNotEmpty() && isset($tourList[0]->tourCategorys->name))
+    <h2 class="text-black text-[20px] lg:text-[48px] font-[500]">
+        {{ $tourList[0]->tourCategorys->name }} in Jaipur
     </h2>
 @endif
 

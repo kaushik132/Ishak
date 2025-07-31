@@ -135,7 +135,7 @@
             </p>
 
             <div class="text-right mb-3">
-                <a href="#" class="font-semibold text-[#A95C32]">Explore More</a>
+                <a href="{{url('tour')}}" class="font-semibold text-[#A95C32]">Explore More</a>
             </div>
         </div>
 
@@ -616,7 +616,7 @@
             </p>
 
             <div class="text-right mb-3">
-                <a href="#" class="font-semibold text-[#A95C32]">Explore More</a>
+                <a href="{{url('tour')}}" class="font-semibold text-[#A95C32]">Explore More</a>
             </div>
         </div>
         <div id="tourPackagesSwiper" class="swiper">

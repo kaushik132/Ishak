@@ -134,7 +134,7 @@
         </div>
     </section>
 
-    <!-- gallery section -->
+    {{-- <!-- gallery section -->
     <section class="gallerySection px-7 lg:px-14 my-14">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div class="col-span-1">
@@ -196,7 +196,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- tour moments section -->
     <section class="tourMomentsSection px-7 lg:px-14 my-14">

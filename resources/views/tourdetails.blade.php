@@ -80,11 +80,11 @@
             <div class="bg-white w-[500px] rounded-lg p-6 relative px-8 py-5">
                 <h2 class="text-[22px] font-semibold">Book This Tour</h2>
 
-                <form action="{{ route('BookTour') }}" method="POST" class="mt-4">
+                <form action="{{ route('Bookyour') }}" method="post" class="mt-4">
                     @csrf
                     <div>
                         <label class="font-semibold text-[15px]">Full Name</label>
-                        <input name="name" type="text"
+                        <input  type="text" name="name"
                             class="mt-1 border border-gray-300 rounded-md text-[12px] p-2 w-full"
                             placeholder="Your Full Name" />
                     </div>
@@ -112,8 +112,8 @@
 
                     <div class="mt-3">
                         <label class="font-semibold text-[15px]">Tour Name</label>
-                        <input value="{{ $tourData->title }}" type="text" name="tour_name" readonly
-                            class="mt-1 border border-gray-300 rounded-md text-[12px] p-2 w-full" disabled />
+                        <input  type="text" name="tour_name" value="{{ $tourData->title }}" readonly
+                            class="mt-1 border border-gray-300 rounded-md text-[12px] p-2 w-full"  />
                     </div>
 
                     <div class="mt-3">
@@ -124,7 +124,8 @@
                     </div>
 
                     <div class="mt-3">
-                        <button type="submit"
+                        <button
+                                type="submit"
                             class="bg-[#A95C32] text-white w-full text-[15px] font-semibold py-2 rounded-lg">
                             Submit Booking
                         </button>
@@ -301,5 +302,25 @@
             </div>
         </div>
     </section>
+
+
+      @if(session('success'))
+    <script>
+        $(document).ready(function() {
+            Toastify({
+                text: '{{session('success')}}',
+                duration: 3000,
+                close: true,
+                gravity: "bottom", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+                onClick: function(){} // Callback after click
+            }).showToast();
+        });
+    </script>
+@endif
 
 @endsection

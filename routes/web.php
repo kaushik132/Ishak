@@ -21,4 +21,4 @@ Route::get('/gallery',[HomeController::class, 'gallery']);
 Route::get('/contact-us',[HomeController::class, 'contact']);
 Route::post('/contact-us',[HomeController::class, 'contactpost'])->name('ContactUs');
 
-Route::post('/book-tour',[HomeController::class, 'bookTour'])->name('BookTour');
+Route::post('/book-tour',[HomeController::class, 'bookTour'])->name('Bookyour');

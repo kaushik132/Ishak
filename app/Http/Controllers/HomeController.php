@@ -64,7 +64,8 @@ class HomeController extends Controller
             // $canocial ='https://www.tajindiatrails.com/blogs';
 
         }
-        $alltour = Tour::latest()->get();
+        $alltour = Tour::inRandomOrder()->get();
+
         $allcoustomer = Customers::latest()->get();
         return view('tour', compact('tourList', 'alltour', 'allcoustomer'));
     }
@@ -189,9 +190,9 @@ class HomeController extends Controller
         $contact_obj->phone = $request->phone;
         $contact_obj->tour_date = $request->tour_date;
         $contact_obj->tour_name = $request->tour_name;
-        $contact_obj->message = $request->message;
+        $contact_obj->message = $request->message;  
         $contact_obj->save();
 
-        return back()->with('success', 'Form Submitted Successfully!');
+        return back()->with('success', 'Booking Request Submitted Successfully!');
     }
 }
